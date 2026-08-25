@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LOGINER — formulário moderno de cadastro.">
+  <title>LOGINER | Cadastro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="orb orb-one" aria-hidden="true"></div>
+  <div class="orb orb-two" aria-hidden="true"></div>
+
+  <main class="page-shell">
+    <section class="intro" aria-labelledby="page-title">
+      <a class="brand" href="#" aria-label="Página inicial LOGINER">
+        <span class="brand-mark" aria-hidden="true">L</span>
+        LOGINER
+      </a>
+      <div class="intro-copy">
+        <p class="eyebrow">SUA JORNADA COMEÇA AQUI</p>
+        <h1 id="page-title">Uma conta.<br><span>Infinitas possibilidades.</span></h1>
+        <p>Crie seu acesso em poucos segundos e descubra uma experiência simples, segura e feita para você.</p>
+      </div>
+      <div class="trust-note">
+        <span class="shield-icon" aria-hidden="true">✓</span>
+        <span><strong>Seus dados protegidos</strong><small>Privacidade em primeiro lugar</small></span>
+      </div>
+    </section>
+
+    <section class="form-panel" aria-labelledby="form-title">
+      <div class="panel-heading">
+        <span class="mobile-brand">LOGINER</span>
+        <p class="step">NOVO POR AQUI?</p>
+        <h2 id="form-title">Crie sua conta</h2>
+        <p>Preencha seus dados para começar.</p>
+      </div>
+
+      <form id="registerForm" novalidate>
+        <div class="field full">
+          <label for="name">Nome completo</label>
+          <div class="input-wrap">
+            <span class="field-icon" aria-hidden="true">●</span>
+            <input id="name" name="name" type="text" placeholder="Como podemos chamar você?" autocomplete="name" minlength="3" required>
+          </div>
+          <small class="error" id="nameError"></small>
+        </div>
+
+        <div class="field full">
+          <label for="email">E-mail</label>
+          <div class="input-wrap">
+            <span class="field-icon mail" aria-hidden="true">@</span>
+            <input id="email" name="email" type="email" placeholder="voce@exemplo.com" autocomplete="email" required>
+          </div>
+          <small class="error" id="emailError"></small>
+        </div>
+
+        <div class="field full">
+          <label for="password">Senha</label>
+          <div class="input-wrap">
+            <span class="field-icon lock" aria-hidden="true">◆</span>
+            <input id="password" name="password" type="password" placeholder="Mínimo de 8 caracteres" autocomplete="new-password" minlength="8" required>
+            <button class="toggle-password" type="button" aria-label="Mostrar senha" aria-pressed="false">◉</button>
+          </div>
+          <div class="password-meter" aria-hidden="true"><span></span><span></span><span></span></div>
+          <small class="error" id="passwordError"></small>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="age">Idade</label>
+            <div class="input-wrap">
+              <span class="field-icon calendar" aria-hidden="true">▦</span>
+              <input id="age" name="age" type="number" placeholder="18+" min="18" max="120" inputmode="numeric" required>
+            </div>
+            <small class="error" id="ageError"></small>
+          </div>
+
+          <div class="field">
+            <label for="gender">Gênero</label>
+            <div class="input-wrap select-wrap">
+              <span class="field-icon" aria-hidden="true">◇</span>
+              <select id="gender" name="gender" required>
+                <option value="" selected disabled>Selecione</option>
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+                <option value="nao-binario">Não binário</option>
+                <option value="outro">Outro</option>
+                <option value="nao-informar">Prefiro não informar</option>
+              </select>
+            </div>
+            <small class="error" id="genderError"></small>
+          </div>
+        </div>
+
+        <label class="terms">
+          <input id="terms" name="terms" type="checkbox" required>
+          <span class="checkmark" aria-hidden="true"></span>
+          <span>Li e concordo com os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a>.</span>
+        </label>
+        <small class="error terms-error" id="termsError"></small>
+
+        <button class="submit-button" type="submit">
+          <span>Criar minha conta</span><span class="arrow" aria-hidden="true">→</span>
+        </button>
+        <p class="login-link">Já tem uma conta? <a href="#">Entrar agora</a></p>
+      </form>
+    </section>
+  </main>
+
+  <div class="toast" id="successToast" role="status" aria-live="polite">
+    <span aria-hidden="true">✓</span>
+    <div><strong>Cadastro validado!</strong><small>Seu formulário está pronto para ser enviado.</small></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
