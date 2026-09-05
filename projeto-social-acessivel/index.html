@@ -6,6 +6,7 @@
   <meta name="description" content="Projeto acadêmico sobre iniciativas de transformação social da Gerando Falcões.">
   <title>Plataforma Social | Início</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/media.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -37,7 +38,11 @@
             <a class="button button-secondary" href="cadastro.html">Quero participar</a>
           </div>
         </div>
-        <img class="hero-image" src="img/comunidade.png" alt="Moradores e lideranças sociais reunidos em uma comunidade" width="900" height="600">
+        <picture>
+          <source srcset="img/comunidade.webp" type="image/webp">
+          <source srcset="img/comunidade.jpg" type="image/jpeg">
+          <img class="hero-image" src="img/comunidade.png" alt="Moradores e lideranças sociais reunidos em uma comunidade" width="900" height="600" loading="eager" fetchpriority="high">
+        </picture>
       </div>
     </section>
 
@@ -68,4 +73,3 @@
   </footer>
 </body>
 </html>
-
