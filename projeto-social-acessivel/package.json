@@ -1,0 +1,11 @@
+{
+  "name": "plataforma-social-acessivel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site acadêmico acessível inspirado no trabalho da Gerando Falcões.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/check.mjs"
+  }
+}
+
